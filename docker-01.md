@@ -558,3 +558,13 @@ Steps:
 3. Upload the created container image to Docker Hub. The image name must be `apacheserver_P1`.
 4. Upload the Docker Hub link of your image to the CV task.
 
+# Respuesta
+
+El comando a introducir en terminal es:
+
+docker pull teterocken/apacheserver_p1:v1
+
+
+
+
+
