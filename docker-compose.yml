@@ -1,0 +1,31 @@
+version: '3'
+services:
+  drupal:
+    image: drupal
+    ports:
+      - 81:80
+    volumes:
+      - volumenDocker:/var/www/html/modules
+      - volumenDocker:/var/www/html/profiles
+      - volumenDocker:/var/www/html/sites
+      - volumenDocker:/var/www/html/themes
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_DATABASE=drupal
+      - MYSQL_USER=drupal
+      - MYSQL_PASSWORD=drupal
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=drupal
+      - MYSQL_USER=drupal
+      - MYSQL_PASSWORD=drupal
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - volumenDocker:/var/lib/mysql
+
+volumes:
+  volumenDocker:
