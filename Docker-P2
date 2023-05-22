@@ -19,4 +19,4 @@ docker run -d -p 81:80 -v volumenDocker:/usr/share/nginx/html --name segundo_con
 
 ## 5.
 
-![](img/captura1-P1.jpg)
+![](img/captura1-P1.png)
