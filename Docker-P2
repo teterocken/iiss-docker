@@ -1,0 +1,22 @@
+# Parte 1
+
+## 1.
+
+docker volume create volumenDocker
+
+## 2.
+
+docker run -d -p 80:80 -v volumenDocker:/usr/share/nginx/html --name volumenDocker nginx
+
+## 3.
+
+docker exec -it volumenDocker /bin/bash
+echo '<!DOCTYPE html><html><head><title>Pagina de Manuel</title></head><bodi><h1>Hola, soy Manuel</h1></body></html>' > /usr/share/nginx/html/index.html
+
+## 4.
+
+docker run -d -p 81:80 -v volumenDocker:/usr/share/nginx/html --name segundo_contenedor nginx
+
+## 5.
+
+![](captura1-P1.jpg)
